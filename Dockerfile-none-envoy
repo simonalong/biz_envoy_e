@@ -1,0 +1,7 @@
+FROM docker.io/itoak/java8:1.0.0
+# 容器启动后的工作目录
+WORKDIR /app
+# 将jar包添加到容器内
+ADD ./jar/biz-e-service.jar server.jar
+# 容器启动后 执行命令
+CMD java -jar server.jar
